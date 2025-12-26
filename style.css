@@ -1,0 +1,97 @@
+/* - ========================
+- Root Variables
+- ======================== */
+
+:root {
+  --surface-weak: hsl(0, 0%, 20%);
+  --surface: hsl(0, 0%, 15%);
+  --surface-strong: hsl(0, 0%, 10%);
+  --foreground-weak: hsl(0, 0%, 40%);
+  --foreground: hsl(0, 0%, 70%);
+  --foreground-strong: hsl(0, 0%, 100%);
+  --accent-weak: hsl(180, 100%, 25%);
+  --accent: hsl(180, 100%, 35%);
+  --accent-strong: hsl(180, 100%, 45%);
+  --scrollbar: var(--foreground) transparent;
+  --font-family: monospace;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+/* - ========================
+- HTML and Body Styling
+- ======================== */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: auto;
+  position: relative;
+  box-sizing: border-box;
+  color: var(--foreground);
+  background: rgb(42, 42, 42);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+/* - ========================
+- Wildcard Styling
+- ======================== */
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--scrollbar);
+}
+
+/* - ========================
+- Utility Classes
+- ======================== */
+
+.hidden {
+  display: none !important;
+}
+
+.debugging * {
+  box-shadow: 0 0 0 1px purple;
+}
+
+/* - ========================
+- Page Element Styling
+- ======================== */
+
+#page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 64px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ~ ======================================================
+~ Project Styling
+~ ====================================================== */
+
+button {
+  margin: 0;
+  padding: 6px 12px;
+  outline: none;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.4;
+}
