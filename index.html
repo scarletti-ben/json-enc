@@ -19,7 +19,37 @@
 <body>
 
   <!-- ~ HTML -->
-  <div id="page" style="display: none;"></div>
+  <div id="page" class="hidden">
+
+    <div id="main">
+      <h1 id="main-title">json-enc</h1>
+      <h2 id="main-subtitle">Select an encryption key</h1>
+
+        <div id="deriver">
+
+          <div class="deriver-option" id="default-option">
+            <div class="deriver-icon">🔑</div>
+            <div class="deriver-title">Default</div>
+            <div class="deriver-subtitle">Generate PBKDF2 key</div>
+          </div>
+
+          <div class="deriver-option" id="debug-option">
+            <div class="deriver-icon">🔑</div>
+            <div class="deriver-title">Debug</div>
+            <div class="deriver-subtitle">Generate debug key</div>
+          </div>
+
+        </div>
+
+        <div id="uploader">
+          <div class="uploader-icon">📁</div>
+          <p class="uploader-text">Click to upload</p>
+          <p class="uploader-hint">Accepts .json and .enc files</p>
+        </div>
+
+    </div>
+
+  </div>
   <!-- ? Note: HTML may be altered by JavaScript -->
 
   <!-- ~ JavaScript -->

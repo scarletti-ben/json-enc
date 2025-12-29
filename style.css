@@ -3,9 +3,9 @@
 - ======================== */
 
 :root {
-  --surface-weak: hsl(0, 0%, 20%);
-  --surface: hsl(0, 0%, 15%);
-  --surface-strong: hsl(0, 0%, 10%);
+  --surface-weak: hsl(200, 10%, 30%);
+  --surface: hsl(200, 10%, 25%);
+  --surface-strong: hsl(200, 10%, 20%);
   --foreground-weak: hsl(0, 0%, 40%);
   --foreground: hsl(0, 0%, 70%);
   --foreground-strong: hsl(0, 0%, 100%);
@@ -57,7 +57,7 @@ body {
 }
 
 .debugging * {
-  box-shadow: 0 0 0 1px purple;
+  box-shadow: 0 0 0 1px purple !important;
 }
 
 /* - ========================
@@ -68,30 +68,118 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 64px;
+  padding: 2rem;
   overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background: linear-gradient(135deg, var(--surface-strong) 0%, var(--surface-weak) 100%);
 }
 
 /* ~ ======================================================
 ~ Project Styling
 ~ ====================================================== */
 
-button {
+#main {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 300px;
   margin: 0;
-  padding: 6px 12px;
-  outline: none;
-  border: none;
-  background: var(--accent);
-  color: white;
-  border-radius: 8px;
-  user-select: none;
-  cursor: pointer;
+  padding: 2rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-weak);
+  border-radius: 16px;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
 }
 
-button:hover {
-  opacity: 0.4;
+#main-title {
+  color: var(--foreground-strong);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#main-subtitle {
+  color: var(--foreground);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+#uploader {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  border: 2px dashed var(--foreground-weak);
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#uploader:hover {
+  border-color: var(--foreground);
+}
+
+#uploader.error {
+  border-color: red !important;
+}
+
+.uploader-icon {
+  font-size: 3rem;
+}
+
+.uploader-text {
+  color: var(--foreground-strong);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.uploader-hint {
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+
+#deriver {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+}
+
+.deriver-option {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--surface);
+  transition: all 0.3s ease;
+}
+
+.deriver-option:hover {
+  background: var(--accent-weak);
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.deriver-icon {
+  font-size: 3rem;
+}
+
+.deriver-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground-strong);
+}
+
+.deriver-subtitle {
+  font-size: 0.85rem;
+  color: var(--foreground);
 }
